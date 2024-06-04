@@ -1,0 +1,74 @@
+!#/bin/bash
+
+FILE="students-list_1023.txt"
+
+# Function to create a student record
+create_student() {
+    echo "Enter student email:"
+    read email
+    echo "Enter student age:"
+    read age
+    echo "Enter student ID:"
+    read student_id
+    echo "$student_id,$email,$age" >> $FILE
+    echo "Student record added."
+}
+
+# Function to view all student records
+view_students() {
+    if [[ -f $FILE ]]; then
+        cat $FILE
+    else
+        echo "No records found."
+    fi
+}
+
+# Function to delete a student record by ID
+delete_student() {
+    echo "Enter student ID to delete:"
+    read student_id
+    if [[ -f $FILE ]]; then
+        grep -v "^$student_id," $FILE > temp.txt && mv temp.txt $FILE
+        echo "Student record deleted."
+    else
+        echo "No records found."
+    fi
+}
+
+# Function to update a student record by ID
+update_student() {
+    echo "Enter student ID to update:"
+    read student_id
+    if [[ -f $FILE ]]; then
+        grep -v "^$student_id," $FILE > temp.txt
+        echo "Enter new student email:"
+        read new_email
+        echo "Enter new student age:"
+        read new_age
+        echo "$student_id,$new_email,$new_age" >> temp.txt
+        mv temp.txt $FILE
+        echo "Student record updated."
+    else
+        echo "No records found."
+    fi
+}
+
+# Main loop
+while true; do
+    echo "Choose an option:"
+    echo "1. Create student record"
+    echo "2. View all students"
+    echo "3. Delete student record"
+    echo "4. Update student record"
+    echo "5. Exit"
+    read choice
+
+    case $choice in
+        1) create_student ;;
+        2) view_students ;;
+        3) delete_student ;;
+        4) update_student ;;
+        5) exit 0 ;;
+        *) echo "Invalid option. Please try again." ;;
+    esac
+done
