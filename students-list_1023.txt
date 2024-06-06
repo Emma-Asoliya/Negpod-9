@@ -1,0 +1,30 @@
+#!//bin/bash
+
+STUDENT_FILE="students-list_1023.txt"
+#adding a student 
+add_student () {
+       	
+echo "Hello student" 
+sleep 2
+read -p "Enter your student Email" student_email
+echo "Thank you, $student_email"
+sleep 2
+read -p "How old are you?" age
+echo "$age is valid" 
+sleep 2
+read -p "Input your student ID here" student_ID
+echo "your Identification number for Bachelor of Software Engineering is $student_ID
+echo "Thank you, you have now been registered as $studentemail"
+
+echo "$student_email $age $student_ID" >> $students-list_1023.txt
+
+#Deleting a student
+delete_student() {
+	read -p "Enter Student ID OR Email to delete:" to_delete
+	if grep -q "$to_delete" "$stsudents-list_1023.txt"; then
+	grep -v "$identifier" "$STUDENT_FILE" >	temp.txt && mv temp.txt "$STUDENT_FILE"
+	echo "Student record succesfully deleted"
+else
+	echo "Student record not found"
+	fi
+
