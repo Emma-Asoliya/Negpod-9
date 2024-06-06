@@ -13,7 +13,7 @@ read -p "How old are you?" age
 echo "$age is valid" 
 sleep 2
 read -p "Input your student ID here" student_ID
-echo "your Identification number for Bachelor of Software Engineering is $student_ID
+echo "Your Identification number for Bachelor of Software Engineering is $student_ID"
 echo "Thank you, you have now been registered as $studentemail"
 
 echo "$student_email $age $student_ID" >> $students-list_1023.txt
