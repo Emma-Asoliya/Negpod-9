@@ -1,6 +1,6 @@
-#!//bin/bash
+#!/usr/bin/env bash
 
-STUDENT_FILE=$students-list_1023.txtx
+STUDENT_FILE=$students-list_1023.txt
 #adding a student 
 add_student () {
        	

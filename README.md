@@ -13,4 +13,11 @@ Features
 -Selects and lists student emails
 
 How to?
+To start the app run ./main.sh on your terminal
+You will access a menu listing features accessible on the app
+Enter the number providedfor a feature to run it. 
+Instructions are provided for each feature
+
+Collaboration
+The  app has all permissions turned on.
 
