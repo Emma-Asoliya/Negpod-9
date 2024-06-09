@@ -1,34 +1,27 @@
-#!//bin/bash
+#!/bin/bash
+STUDENT_FILE="student-list_1023.txt"
 
-STUDENT_FILE=$students-list_1023.txtx
-#adding a student 
-add_student () {
-       	
-echo "Hello student" 
-sleep 2
-read -p "Enter your student Email" student_email
-echo "Thank you, $student_email"
-sleep 2
-read -p "How old are you?" age
-echo "$age is valid" 
-sleep 2
-read -p "Input your student ID here" student_ID
-echo "Your Identification number for Bachelor of Software Engineering is $student_ID"
-echo "Thank you, you have now been registered as $studentemail"
-
-echo "$student_email $age $student_ID" >> $students-list_1023.txt
-echo ""
+#Function to create/add student record 
+create_student_account () { 
+	echo "Enter your student email here:"
+	read student_email
+	echo "Enter your age:"
+	read age
+	echo "Enter your student ID here:"
+	read student_ID
+	echo $student_email $student_ID $age >> STUDENT_FILE
+	echo "Student record has been successfully added"
+	echo "You have been registered as $student_email"
 }
 
-#Deleting a student
-delete_student() {
-	read -p "Enter Student ID OR Email to delete:" to_delete
-	if grep -q "$to_delete" "$stsudents-list_1023.txt"; then
-		grep -v "$identifier" "$STUDENT_FILE" > temp.txt && mv temp.txt "$STUDENT_FILE"
-		echo "Student record has been deleted successfully"
+#Function to delete student record 
+delete_student_account () {
+	echo "Enter student_ID to delete
+	read student_email 
+	if[[ -f $STUDENT_FILE ]]; then
+	grep -v "^$student_id," $FILE > temp.txt && mv temp.txt $STUDENT_FILE
+	echo "student record successfully deleted
 	else
-		echo "Invalid Student ID or Email"
-		fi
-		echo ""
-	}
-
+echo "No student record found, invalid student_ID entered"
+ fi
+}
