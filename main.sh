@@ -37,6 +37,32 @@ list_student_accounts () {
     fi
 }
 
+#Function to update Student
+update_student() {
+    echo "Enter Student ID to update:"
+    read student_id
+    if grep -q "^$student_id," $STUDENT_FILE; then
+        echo "Enter new Student Email:"
+        read new_email
+        echo "Enter new Student Age:"
+        read new_age
+        grep -v "^$student_id," $STUDENT_FILE > temp_file
+        echo "$student_id,$new_email,$new_age" >> temp_file
+        mv temp_file $STUDENT_FILE
+        echo "Student record updated successfully!"
+    else
+        echo "Student ID not found!"
+    fi
+
+#Function to sort student email
+if [[ -f $STUDENT_FILE ]]; then
+    # Extract emails, sort them, and save to a new file
+    cut -d',' -f2 $STUDENT_FILE | sort > $SORTED_EMAIL_FILE
+    echo "Emails have been sorted and saved to $SORTED_EMAIL_FILE"
+else
+    echo "No student records found!"
+fi
+
 # Function to display the menu
 show_menu () {
     echo "===== ALU  Management System ======"
