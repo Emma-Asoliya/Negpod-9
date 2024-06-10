@@ -37,7 +37,8 @@ list_student_accounts () {
     fi
 }
 
-#Function to update Student
+#Function to Update student records
+
 update_student() {
     echo "Enter Student ID to update:"
     read student_id
@@ -53,15 +54,18 @@ update_student() {
     else
         echo "Student ID not found!"
     fi
+}
 
-#Function to sort student email
-if [[ -f $STUDENT_FILE ]]; then
-    # Extract emails, sort them, and save to a new file
-    cut -d',' -f2 $STUDENT_FILE | sort > $SORTED_EMAIL_FILE
-    echo "Emails have been sorted and saved to $SORTED_EMAIL_FILE"
-else
-    echo "No student records found!"
-fi
+#Function to Sort Emails
+
+sort_emails() {
+    if [[ -f $STUDENT_FILE ]]; then
+        cut -d',' -f2 $STUDENT_FILE | sort > sorted-student-emails.txt
+        echo "Student emails sorted and saved to sorted-student-emails.txt"
+    else
+        echo "No student records found!"
+    fi
+}
 
 # Function to display the menu
 show_menu () {
