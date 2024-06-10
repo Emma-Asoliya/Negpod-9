@@ -87,8 +87,8 @@ while true; do
         1) create_student_account ;;
         2) delete_student_account ;;
         3) list_student_accounts ;;
-        4)             ;;
-	5)       ;;
+        4) update_student ;;
+	5) sort_emails ;;
 	6) echo "Exiting the Student Management System. Goodbye!"; exit 0 ;;
         *) echo "Invalid option. Please enter a number between 1 and 4." ;;
     esac
