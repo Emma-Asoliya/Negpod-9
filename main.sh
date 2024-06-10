@@ -39,23 +39,27 @@ list_student_accounts () {
 
 # Function to display the menu
 show_menu () {
-    echo "== Student Management System =="
+    echo "===== ALU  Management System ======"
     echo "1. Add Student"
     echo "2. Delete Student"
     echo "3. List Students"
-    echo "4. Exit"
+    echo "4. Update Student Record"
+    echo "5. Sort Emails"
+    echo "6. Exit"
     echo ""
 }
 
 # Main loop
 while true; do
     show_menu
-    read -p "Choose an option (1-4): " choice
+    read -p "Choose an option (1-6): " choice
     case $choice in
         1) create_student_account ;;
         2) delete_student_account ;;
         3) list_student_accounts ;;
-        4) echo "Exiting the Student Management System. Goodbye!"; exit 0 ;;
+        4)             ;;
+	5)       ;;
+	6) echo "Exiting the Student Management System. Goodbye!"; exit 0 ;;
         *) echo "Invalid option. Please enter a number between 1 and 4." ;;
     esac
     echo ""
