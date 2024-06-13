@@ -1,1 +1,40 @@
-"storage"
+<<<<<<< HEAD
+5
+3
+o.attah@alustudent.com
+=======
+#!/usr/bin/env bash
+
+STUDENT_FILE="$students-list_1023.txt"
+#adding a student 
+add_student () {
+       	
+echo "Hello student" 
+sleep 2
+read -p "Enter your student Email" student_email
+ $student_email"
+sleep 2
+read -p "How old are you?" age
+echo "$age is valid" 
+sleep 2
+read -p "Input your student ID here" student_ID
+echo "Your Identification number for Bachelor of Software Engineering is $student_ID"
+ you have now been registered as $studentemail"
+
+echo "$student_email $age $student_ID" >> $students-list_1023.txt
+echo ""
+}
+
+#Deleting a student
+delete_student() {
+	read -p "Enter Student ID OR Email to delete:" to_delete
+	if grep -q "$to_delete" "$stsudents-list_1023.txt"; then
+		grep -v "$identifier" "$STUDENT_FILE" > temp.txt && mv temp.txt "$STUDENT_FILE"
+		echo "Student record has been deleted successfully"
+	else
+		echo "Invalid Student ID or Email"
+		fi
+		echo ""
+	}
+
+>>>>>>> 6e37f9e97447dadefb61f89e158a904d86a7c9b9

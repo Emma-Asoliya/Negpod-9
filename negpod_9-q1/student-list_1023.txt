@@ -1,0 +1,6 @@
+e.briggs@alustudent.com, 23456, 20
+o.attah@alustudent.com, 34567, 20
+l.runiga@alustudent.com, 45678, 20
+w.nji1@alustudent.com, 5678, 20
+g.paul@alustudent.com, 67895, 20
+k.adepoju@alustudent.com, 12345, 20

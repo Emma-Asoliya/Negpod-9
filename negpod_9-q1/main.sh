@@ -20,7 +20,7 @@ delete_student_account () {
     echo "Enter student ID to delete:"
     read student_ID
     if [[ -f $STUDENT_FILE ]]; then
-        grep -v "^$student_ID," "$STUDENT_FILE" > temp.txt && mv temp.txt "$STUDENT_FILE"
+        sed -i "/^$student_ID,/d" "$STUDENT_FILE"
         echo "Student record successfully deleted"
     else
         echo "No student record found, invalid student ID entered"
