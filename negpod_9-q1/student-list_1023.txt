@@ -3,3 +3,6 @@ l.runiga@alustudent.com, 45678, 20
 w.nji1@alustudent.com, 5678, 20
 g.paul@alustudent.com, 67895, 20
 k.adepoju@alustudent.com, 12345, 20
+e.briggs@gmail.com, 76543, 20
+e.briggs@yahoo.com, 096543, 23
+i@gmail.com, 987654, 22

@@ -19,7 +19,7 @@ create_student_account () {
 # Function to delete student record
 delete_student_account () {
     echo "Enter student email to delete:"
-    read student_email
+    read student_ID
     if [[ -f $STUDENT_FILE ]]; then
         if grep -q "^$student_ID," "$STUDENT_FILE"; then
             grep -v "^$student_ID," "$STUDENT_FILE" > temp.txt && mv temp.txt "$STUDENT_FILE"
@@ -45,8 +45,8 @@ list_student_accounts () {
 #Function to Update student records
 
 update_student() {
-    echo "Enter Student ID to update:"
-    read student_id
+    echo "Enter Student Email to update:"
+    read student_email
     if grep -q "^$student_id," $STUDENT_FILE; then
         echo "Enter new Student Email:"
         read new_email
