@@ -15,13 +15,18 @@ create_student_account () {
     echo "You have been registered as $student_email"
 }
 
-# Function to delete student record 
+
+# Function to delete student record
 delete_student_account () {
     echo "Enter student email to delete:"
     read student_email
     if [[ -f $STUDENT_FILE ]]; then
-        sed -i "/^$student_ID,/d" "$STUDENT_FILE"
-        echo "Student record successfully deleted"
+        if grep -q "^$student_ID," "$STUDENT_FILE"; then
+            grep -v "^$student_ID," "$STUDENT_FILE" > temp.txt && mv temp.txt "$STUDENT_FILE"
+            echo "Student record successfully deleted"
+        else
+            echo "No student record found for ID $student_ID."
+        fi
     else
         echo "No student record found, invalid student ID entered"
     fi
