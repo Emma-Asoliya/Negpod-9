@@ -90,7 +90,7 @@ while true; do
         4) update_student ;;
 	5) sort_emails ;;
 	6) echo "Exiting the Student Management System. Goodbye!"; exit 0 ;;
-        *) echo "Invalid option. Please enter a number between 1 and 4." ;;
+        *) echo "Invalid option. Please enter a number between 1 and 6." ;;
     esac
     echo ""
 done
