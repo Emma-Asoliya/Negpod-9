@@ -2,9 +2,9 @@
 
 # Variables
 DIRECTORY="negpod_9-q1"
-REMOTE_USER="ec1ebc754f75"      # Replace with your remote server username
-REMOTE_HOST="ec1ebc754f75.a5efec7a.alu-cod.online"      # Replace with your remote server hostname or IP
-REMOTE_DIR="/summative/0524-2024m" # Replace with the remote backup directory
+REMOTE_USER="847971fa9ab8"
+REMOTE_HOST="847971fa9ab8.a5efec7a.alu-cod.online"
+REMOTE_DIR="/summative/0524-2024m"
 
 # Check if the directory exists
 if [ -d "$DIRECTORY" ]; then
