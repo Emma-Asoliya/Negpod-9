@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 STUDENT_FILE="student-list_1023.txt"
 
