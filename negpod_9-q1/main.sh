@@ -17,7 +17,7 @@ create_student_account () {
 
 # Function to delete student record 
 delete_student_account () {
-    echo "Enter student ID to delete:"
+    echo "Enter student email to delete:"
     read student_ID
     if [[ -f $STUDENT_FILE ]]; then
         sed -i "/^$student_ID,/d" "$STUDENT_FILE"
